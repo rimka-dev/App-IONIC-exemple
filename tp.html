@@ -1,0 +1,68 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Planning Budget</title>
+    <script type="module" 
+    src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+    <script nomodule 
+    src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css"/>
+  </head>
+  <body>
+    <ion-app> 
+        <ion-header>
+            <ion-toolbar color ="Tertiary">
+                <ion-title>iNoteSeries</ion-title>
+            </ion-toolbar>
+        </ion-header>    
+            <ion-content>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col >
+                            <ion-card >
+                                <img src="film.jpg" style="height:300px;">
+                                <ion-card-header style="background-color: rgb(116, 151, 226);">
+                                    <ion-card-subtitle>IFOFLIX</ion-card-subtitle>
+                                    <ion-card-title>
+                                     Noter vos séries 
+                                    </ion-card-title>
+                                    <p>
+                                        Quelles sont les meilleurs films de tous les temps, toute nationalités et tous genre confondus?
+                                    </p>
+                                </ion-card-header>
+                                <ion-card-content style="padding-top: 0px;">
+                                    
+                                    <ion-item>
+                                        <ion-label position = "floating">Nom Série</ion-label>
+                                        <ion-input type="text" id ="input-design"></ion-input>
+                                    </ion-item>
+                                    <ion-item>
+                                        <ion-label>Score</ion-label>
+                                            <ion-select id ="input-note" value="5"> <!--note pas fefaut-->
+                                                <ion-select-option value="1">1</ion-select-option>
+                                                <ion-select-option value="2">2</ion-select-option>
+                                                <ion-select-option value="3">3</ion-select-option>
+                                                <ion-select-option value="4">4</ion-select-option>
+                                                <ion-select-option value="5">5</ion-select-option>
+                                            </ion-select>
+                                    </ion-item>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size-md="6">
+                            <ion-list id="listescore"></ion-list>
+                        </ion-col>
+                    </ion-row>
+                    <div margin-vertical text-center>
+                        <ion-button size ="large" color ="Tertiary" id = "btn-start">Commencer à noter </ion-button>                                  
+                    </div>
+                </ion-grid>
+            </ion-content>
+    </ion-app>
+    <ion-alert-controller></ion-alert-controller>
+    <script src="tp.js"></script>     
+  </body>
